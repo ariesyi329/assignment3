@@ -1,0 +1,58 @@
+1.
+
+import os.path
+
+help(os.path)
+Help on module posixpath:
+
+NAME
+    posixpath - Common operations on Posix pathnames.
+
+FILE
+    /usr/lib/python2.7/posixpath.py
+    
+the file is /usr/lib/python2.7/posixpath.py
+
+2.
+
+I used:
+
+num = int(os.popen('ls /etc | wc -l').read())
+
+and I got:
+num
+Out[6]: 232
+
+3.
+
+import numpy
+
+numpy.sqrt(num)
+Out[8]: 15.231546211727817
+
+4.
+
+x=12345
+
+%timeit (x**2)
+10000000 loops, best of 3: 54.7 ns per loop
+
+%timeit (x*x)
+10000000 loops, best of 3: 38.4 ns per loop
+
+%timeit (numpy.square(x))
+1000000 loops, best of 3: 1.11 µs per loop
+
+Therefore, x*x is the fastest operation.
+
+5.
+
+%lsmagic
+Out[107]: 
+Available line magics:
+%alias  %alias_magic  %autocall  %automagic  %autosave  %bookmark  %cd  %clear  %colors  %config  %connect_info  %debug  %dhist  %dirs  %doctest_mode  %ed  %edit  %env  %gui  %guiref  %hist  %history  %install_default_config  %install_ext  %install_profiles  %killbgscripts  %less  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %lsmagic  %macro  %magic  %man  %matplotlib  %more  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %popd  %pprint  %precision  %profile  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset  %reset_selective  %run  %save  %sc  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos  %xdel  %xmode
+
+Available cell magics:
+%%!  %%HTML  %%SVG  %%bash  %%capture  %%debug  %%file  %%html  %%javascript  %%latex  %%perl  %%prun  %%pypy  %%python  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
+
+As the cell magics list shows, there are 24 cell magics.
